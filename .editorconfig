@@ -1,0 +1,13 @@
+# EditorConfig es un archivo para ayudar a mantener la consistencia de codificación entre diferentes editores e IDEs
+root = true
+
+[*]
+indent_style = space  # puedes usar "tab" si prefieres tabulaciones
+indent_size = 4       # tamaño de la indentación
+end_of_line = lf      # tipo de salto de línea
+charset = utf-8       # codificación de caracteres
+trim_trailing_whitespace = true # eliminar espacios en blanco al final de líneas
+insert_final_newline = true      # añadir una nueva línea al final del archivo
+
+[*.{js,css,html}]
+max_line_length = 120  # Longitud máxima de línea para archivos JS, CSS y HTML
