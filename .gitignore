@@ -1,0 +1,6 @@
+# Ignorar archivos temporales
+*.tmp
+
+# Ignorar node_modules
+node_modules/
+
