@@ -1,34 +1,12 @@
 .page {
-  max-width: 1600px;
   min-width: 1100px;
-  margin: auto;
-  font-family: "Arial", sans-serif;
-  line-height: 20px;
+  max-width: 1600px;
+  font-family: Arial, sans-serif;
   font-size: 16px;
-}
+  line-height: 20px;
+  margin: 0 auto;
 
-h1,
-p {
-  margin: 0;
-}
-
-/* Font sizes */
-h1 {
-  font-size: 62px;
-  line-height: 76px;
-  font-weight: 500;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-h4 {
-  font-size: 1rem;
+  /* Agrega las propiedades de la clase page aquí */
 }
 
 .header {
@@ -43,49 +21,53 @@ h4 {
 }
 
 .nav {
-  /* Agrega las propiedades flex aquí */
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  /* Agrega las propiedades flex aquí */
 }
 
 .nav__logo {
-  width: 58px;
   height: 80px;
+  width: 58px;
 }
 
 .nav__links {
+  /* Restablece los estilos predeterminados de list aquí */
   display: flex;
+  column-gap: 20px;
   list-style-type: none;
   margin: 8px 0 0;
-  column-gap: 20px;
   padding: 0;
 }
 
 .nav__link {
   color: #000000;
-  text-decoration: none;
   font-weight: bold;
-}
-
-ul {
-  padding: 0;
+  text-decoration: none;
 }
 
 .header__content {
   display: flex;
   justify-content: space-between;
+  flex-grow: 1;
+  /* Agrega las propiedades flex aquí */
 }
 
 .header__title {
-  max-width: 635px;
+  font-size: 62px;
+  line-height: 76px;
+  font-weight: 500;
   margin-top: 128px;
+  max-width: 635px;
 }
 
 .header__description {
-  max-width: 515px;
-  margin-top: 32px;
   font-size: 20px;
   line-height: 30px;
+  margin-top: 32px;
+  margin-bottom: 1.5em;
+  max-width: 515px;
 }
 
 .header__image {
@@ -111,14 +93,10 @@ ul {
   color: #838383;
 }
 
-/* section 2 */
-
 .staff {
   background-image: url("../images/staff_picks_background.jpg");
   padding: 100px 0 140px;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .staff__title {
@@ -140,18 +118,18 @@ ul {
 }
 
 .staff__cards {
-  display: flex;
   max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 68px;
-  margin-bottom: 0;
+  margin: 0 auto;
+  display: flex;
   flex-wrap: wrap;
-  list-style-type: none;
-  gap: 40px;
   justify-content: center;
+  gap: 40px;
   padding-left: 0;
+  list-style-type: none;
+  margin-top: 68px;
 }
+
+/* Agrega la regla CSS para tu nueva clase aquí. Asegúrate de colocarlo antes de .card:, los padres deben preceder a sus hijos */
 
 .card {
   background-color: #fff;
@@ -167,6 +145,7 @@ ul {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .card__title {
@@ -187,9 +166,9 @@ ul {
   font-size: 14px;
   line-height: 20px;
   color: #838383;
+
   margin-top: auto;
 }
-
 
 .events {
   padding: 100px 0 120px 80px;
@@ -340,14 +319,12 @@ ul {
   padding: 0;
   margin: 100px 0 0;
   display: flex;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin-inline: auto;
+  justify-content: center;
+  column-gap: 40px;
 }
 
 .step {
   flex-basis: 220px;
-  flex-direction: row;
 }
 
 .step__title {
@@ -367,44 +344,34 @@ ul {
   margin: 10px 0 0;
 }
 
-/* //footer */
-
 .footer {
   box-sizing: border-box;
-  display: flex;
-  background: #111;
-  position: relative;
-padding: 60px 80px;
-color: white;
+  background-size: cover;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 60px 80px;
 }
 
 .footer__columns {
   display: flex;
-  width: 100%;
-flex-direction: row;
- }
+  justify-content: space-between;
+}
 
 .footer__column_content_hours {
-  display: flex;
-  flex-direction: column;
   margin-left: auto;
 }
 
 .footer__column_content_social {
-  color: white;
-  flex-direction: column;
   margin-left: 80px;
 }
 
 .footer__logo {
   width: 58px;
   height: 80px;
-  left: 80px;
 }
 
 .footer__column-heading {
-color: white;
-margin: 0 0 20px;
+  margin-bottom: 20px;
 }
 
 .footer__list {
@@ -414,26 +381,23 @@ margin: 0 0 20px;
 }
 
 .footer__list-item {
-  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .footer__column-link {
   color: white;
   text-decoration: none;
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
 }
 
 .footer__social-icon {
-  width: 16px;
   height: 16px;
+  width: 16px;
+  margin-right: 10px;
 }
-
-
 
 .footer__copyright {
   margin-top: 100px;
-  position: absolute;
-  bottom: 60px;
-  left: 80px;
-  right: auto;
 }
